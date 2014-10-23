@@ -1,7 +1,105 @@
+/* Slider Styles */
+
+@keyframes slide {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+@-webkit-keyframes slide {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+@-moz-keyframes slide {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+@-o-keyframes slide {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+section#slider {
+	margin: auto auto;
+	overflow: hidden;
+}
+
+section#slider figure {
+
+	/* position: relative; allows us to move figure (left: ..) more easily during animation */
+	position: relative;
+	width: 500%;
+	margin: 0;
+	padding: 0;
+
+	/* font-size: 0; removes extra space around images in figure element */
+	font-size: 0;
+	/* bugfix for Safari 5 for Windows */
+	text-align: left;
+	-webkit-animation: 30s slide infinite; /* Safari 4+ */
+	-moz-animation:   30s slide infinite; /* Fx 5+ */
+	-o-animation:      30s slide infinite; /* Opera 12+ */
+	animation: 30s slide infinite;
+}
+
+	/* very rough "pause" on hover, will actually pause in between image transition as well*/
+section#slider figure:hover {
+	-webkit-animation-play-state: paused;
+}
+
+section#slider figure img {
+	width: 20%;
+	height: auto;
+
+	/* bugfix for Safar 5 again */
+	float: left;
+}
+
 /* Bootstrap Overrides */
 
+h1 {
+	color: #666 !important;
+	font-size: 1.2em !important;
+	font-weight: bold !important;
+}
+
+h2 {
+	color: #666 !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+}
+
 .navbar-brand {
-	height: 80px !important; 
+	height: 90px !important; 
 }
 
 .navbar {
@@ -9,48 +107,219 @@
 	border: none !important;
 }
 
-.navbar-nav > li > a {
-	padding-bottom: 5px !important;
+.navbar-toggle {
+	margin-top: 45px !important;
 }
 
-@media screen and (min-width: 769px) {
+.navbar-nav > li > a {
+	margin-bottom: 10px !important;
+	font-size: 1.2em;
+	color: #3c4c55 !important;
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+}
+
+@media screen and (min-width: 768px) {
 	.navbar-right {
 		margin-top: 30px !important;
 	}
 }
 
-
-
-/*  Header Styles */
-
-
-/* Global Styles */
-
-body {
-	padding-top: 50px;
+.content .col-sm-9 {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
-.btm-sky a span {
-	border-bottom: 1px solid #70c6dc;
+.content .col-sm-3 {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
-.btm-orange a span {
-	border-bottom: 1px solid #e47a1e;
+.content {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
-.btm-teal a span {
-	border-bottom: 1px solid #00a389;
+/* Header Styles */
+
+.navbar-nav > li > a > span {
+	padding: 0 5px 5px 5px;
 }
 
-.btm-green a span {
-	border-bottom: 1px solid #92c747;
+@media screen and (min-width: 768px) {
+	.btm-sky a span {
+		border-bottom: 1px solid #70c6dc;
+	}
+
+	.btm-orange a span {
+		border-bottom: 1px solid #e47a1e;
+	}
+
+	.btm-teal a span {
+		border-bottom: 1px solid #00a389;
+	}
+
+	.btm-green a span {
+		border-bottom: 1px solid #92c747;
+	}
+
+	.btm-blue a span {
+		border-bottom: 1px solid #0072a7;
+	}
+
+	.btm-gold a span{
+		border-bottom: 1px solid #fdb825;
+	}
 }
 
-.btm-blue a span {
-	border-bottom: 1px solid #0072a7;
+/* Content Styles */
+
+@media screen and (min-width: 480px) {
+	.content {
+		border-left: 1px dashed #666;
+		border-right: 1px dashed #666;
+	}
+	#aside-content {
+		border-left: 1px dashed #666;
+	}
 }
 
-.btm-gold a span{
-	border-bottom: 1px solid #fdb825;
+.content {
+	margin-top: 50px;
 }
 
+.content-head {
+	border-bottom: 1px dashed #666;
+	padding: 5px 10px;
+
+}
+
+#aside-content {
+	padding: 0 15px;
+	margin-top: 15px;
+}
+
+.content h1 {
+	margin: .27em 0 !important;
+}
+
+.content ul {
+	list-style-position: inside;
+	padding: 0 !important;
+}
+
+.content li {
+	font-size: .8em;
+	color: #666;
+}
+
+.content li a {
+	color: #00abaa;
+}
+
+.content li a:hover {
+	color: #e47a1e;
+	text-decoration: none;
+}
+
+#phelps-people {
+	margin: 15px;
+}
+
+/* Feed Styles */
+
+@media screen and (min-width: 480px) {
+	#feed-wrapper { 
+		height: 360px !important;
+	}
+}
+
+#feed-wrapper {
+	height: 230px;
+	overflow: hidden;
+	scrollbar-x: none;
+	scrollbar-y: right;
+	position: relative;
+	padding-left: 15px;
+	padding-right: -15px;
+	min-width: 300px;
+}
+
+#feed ul {
+	list-style-position: outside;
+	margin: 0 10px;
+}
+
+#feed ul li {
+	line-height: 10px;
+	padding-bottom: 10px;
+}
+
+#feed .ext-post {
+	list-style-type: none;
+	list-style-image: url('../images/ext-icon.png');
+}
+
+#feed .blog-post {
+	list-style-type: none;
+	list-style-image: url('../images/blog-icon.png');
+}
+
+#feed .fb-post {
+	list-style-type: none;
+	list-style-image: url('../images/fb-icon.png');
+}
+
+/* Footer  Styles */
+
+footer {
+	width: 100%;
+	background: #d9d9d9;
+	margin-top: 50px;
+	padding: 20px 0;
+	color: #3c4c55;
+}
+
+footer ul {
+	text-decoration: none;
+	list-style-type: none;
+	display: inline;
+}
+
+footer ul li a {
+	float: left;
+	border-right: 1px solid gray;
+	padding: 0 5px;
+	line-height: 12px;
+	color: #3c4c55;
+}
+
+footer ul li:first-child a {
+	padding: 0 5px 0 0;
+}
+
+footer ul li a:hover {
+	text-decoration: none;
+	color: #00a389;
+}
+
+footer ul li:last-child a {
+	border: none;
+}
+
+footer .container {
+	padding: 0;
+}
+
+footer address {
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+#copyright {
+	font-size: 10px;
+}
+
+footer h1 {
+	color: #545861 !important;
+}
