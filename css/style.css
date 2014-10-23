@@ -1,31 +1,56 @@
-nav ul li {
-	display: inline-block;
-	text-decoration: none;
-	padding: 5px 10px;
-	margin: 0 10px;
+/* Bootstrap Overrides */
+
+.navbar-brand {
+	height: 80px !important; 
 }
 
-.btm-sky {
-	border-bottom: 2px solid #70c6dc;
+.navbar {
+	background: none !important;
+	border: none !important;
 }
 
-.btm-orange {
-	border-bottom: 2px solid #e47a1e;
+.navbar-nav > li > a {
+	padding-bottom: 5px !important;
 }
 
-.btm-teal {
-	border-bottom: 2px solid #00a389;
+@media screen and (min-width: 769px) {
+	.navbar-right {
+		margin-top: 30px !important;
+	}
 }
 
-.btm-green {
-	border-bottom: 2px solid #92c747;
+
+
+/*  Header Styles */
+
+
+/* Global Styles */
+
+body {
+	padding-top: 50px;
 }
 
-.btm-blue {
-	border-bottom: 2px solid #0072a7;
+.btm-sky a span {
+	border-bottom: 1px solid #70c6dc;
 }
 
-.btm-gold {
-	border-bottom: 2px solid #fdb825;
+.btm-orange a span {
+	border-bottom: 1px solid #e47a1e;
+}
+
+.btm-teal a span {
+	border-bottom: 1px solid #00a389;
+}
+
+.btm-green a span {
+	border-bottom: 1px solid #92c747;
+}
+
+.btm-blue a span {
+	border-bottom: 1px solid #0072a7;
+}
+
+.btm-gold a span{
+	border-bottom: 1px solid #fdb825;
 }
 
