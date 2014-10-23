@@ -1,0 +1,31 @@
+nav ul li {
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px 10px;
+	margin: 0 10px;
+}
+
+.btm-sky {
+	border-bottom: 2px solid #70c6dc;
+}
+
+.btm-orange {
+	border-bottom: 2px solid #e47a1e;
+}
+
+.btm-teal {
+	border-bottom: 2px solid #00a389;
+}
+
+.btm-green {
+	border-bottom: 2px solid #92c747;
+}
+
+.btm-blue {
+	border-bottom: 2px solid #0072a7;
+}
+
+.btm-gold {
+	border-bottom: 2px solid #fdb825;
+}
+
